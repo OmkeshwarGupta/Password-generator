@@ -1,0 +1,230 @@
+*,
+*::before ,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-shadow: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(231deg, rgba(22, 6, 40, 1)0%, rgba(52, 28, 79, 1)50%, rgba(88, 7, 125, 1)100%);
+    
+}
+.container{
+    width: 90%;
+    max-width: 450px;
+}
+
+h1 {
+    color: white;
+    opacity: .75;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+.display-container {
+    position: relative;
+    background-color: rgb(27, 11, 43);
+    border-radius: 1rem;
+    border-bottom: 0.35rem solid rgb(100, 24, 175);
+    margin: 1rem 0;
+    padding-top: 0.35rem;
+}
+
+#display{
+    /* width: 100%; */
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 1.15rem 1rem;
+    color: rgb(223, 223, 38);
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 30px;
+    letter-spacing: 1px;
+    padding-right: 3.25rem;
+}
+
+#display::placeholder{
+    position: absolute;
+    top: 50%;
+    left: 1.15rem;
+    color: rgb(223, 223, 38);
+    opacity: .65;
+    text-transform: uppercase;
+    transform: translateY(-50%);
+    
+
+}
+
+.display-container button{
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+}
+
+.input-container{
+    /* width: 100%; */
+    background-color: rgb(27, 11, 43);
+    border-radius: 1rem;
+    border-bottom: 0.35rem solid rgb(100, 24, 175);
+    padding: 2rem;
+
+}
+
+.length-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.length-container p:nth-child(1){
+    color: white;
+    font-size: 1.5rem;
+
+}
+
+.length-container p:nth-child(2){
+    color: rgb(223, 223, 38);
+    font-size: 1.5rem;
+}
+
+.strength-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.strength-container p{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.indicator{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    
+}
+
+.generateButton{
+    width: 100%;
+    padding:1rem 0;
+    background-color: rgb(170, 48, 170);
+    text-align: center;
+    border: none;
+    border-radius: 0.75rem;
+    border-bottom: 0.35rem solid  rgb(223, 223, 38) ;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color:  rgb(223, 223, 38);
+}
+.check{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0 1rem;
+
+}
+
+.check input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid cyan;
+    border-radius:0.35rem;
+    cursor: pointer;
+    position: relative;
+}
+.check input:checked{
+    background-color: cyan;
+}
+.check input:checked::before{
+    content: "✔";
+    position: absolute;
+    font-size: 1.05rem;
+    font-weight: 600;
+    left: 20%;
+    top: -3.25px;
+
+}
+
+.check label{
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.slider{
+    appearance: none;
+    width: 100%;
+    cursor: pointer;
+    height: 1rem;
+    background-color: rgb(84, 30, 138);
+    border-radius: 0.5rem;
+    position: relative;
+    margin: 1rem 0;
+    background-image: linear-gradient(rgb(170, 48, 170) ,rgb(170, 48, 170));
+    background-repeat: no-repeat;
+}
+
+.slider::-webkit-slider-thumb{
+    appearance: none;
+    width: 2rem;
+    height:2rem;
+    border-radius: 50%;
+    background-color: rgb(223, 223, 38);
+    box-shadow: 0 0 10px  rgb(223, 223, 38);
+    cursor: pointer;
+    position: relative;
+   
+}
+.slider::-webkit-slider-thumb:hover{
+    background-color: black;
+    border: 2px solid rgb(223, 223, 38);
+    box-shadow: 0 0 20px  rgb(223, 223, 38);
+}
+
+.slider:focus{
+    outline: 3px solid rgb(223, 223, 38);
+}
+#cpy{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.copyMsg {
+    position: absolute;
+    background-color: rgb(170, 48, 170);
+    color: yellow;
+    font-size: 1.25rem;
+    top: -35px;
+    left: -25px;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+}
+
+.copyMsg.active {
+    opacity: 1;
+    transform: scale(1);
+}
