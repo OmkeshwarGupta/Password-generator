@@ -1,5 +1,5 @@
 # Password Generator
 <hr>
-It is made up with the help of HTML, CSS, Javascript
+It is made with the help of HTML, CSS, and Javascript
 
 ## Link- [Password Generator](https://om-password-generator.netlify.app/)
